@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+function initialize() {
+  var fenway = {lat: 48.713991, lng: -3.374676};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 19
+  });
+
+var flightPlanCoordinates = [{lat: 48.713991, lng: -3.374676},{lat: 48.714408, lng: -3.374668}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.714408, lng: -3.374668},{lat: 48.714807, lng: -3.374676}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.714807, lng: -3.374676},{lat: 48.715104, lng: -3.374726}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715104, lng: -3.374726},{lat: 48.715371, lng: -3.374796}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715371, lng: -3.374796},{lat: 48.715501, lng: -3.374991}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715501, lng: -3.374991},{lat: 48.715529, lng: -3.375256}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715529, lng: -3.375256},{lat: 48.71558, lng: -3.375635}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.71558, lng: -3.375635},{lat: 48.715655, lng: -3.376135}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715655, lng: -3.376135},{lat: 48.715896, lng: -3.376327}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.715896, lng: -3.376327},{lat: 48.716133, lng: -3.376426}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.716133, lng: -3.376426},{lat: 48.716403, lng: -3.37651}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.716403, lng: -3.37651},{lat: 48.716611, lng: -3.37657}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.716611, lng: -3.37657},{lat: 48.716732, lng: -3.376907}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.716732, lng: -3.376907},{lat: 48.716841, lng: -3.377098}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.716841, lng: -3.377098},{lat: 48.717031, lng: -3.377372}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717031, lng: -3.377372},{lat: 48.717076, lng: -3.377555}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717076, lng: -3.377555},{lat: 48.717096, lng: -3.377792}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717096, lng: -3.377792},{lat: 48.7171, lng: -3.378001}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.7171, lng: -3.378001},{lat: 48.717254, lng: -3.37817}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717254, lng: -3.37817},{lat: 48.717445, lng: -3.378349}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717445, lng: -3.378349},{lat: 48.717571, lng: -3.378498}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717571, lng: -3.378498},{lat: 48.717873, lng: -3.379042}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717873, lng: -3.379042},{lat: 48.717927, lng: -3.379139}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.717927, lng: -3.379139},{lat: 48.71821, lng: -3.379508}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.71821, lng: -3.379508},{lat: 48.718764, lng: -3.379988}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.718764, lng: -3.379988},{lat: 48.719005, lng: -3.380113}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719005, lng: -3.380113},{lat: 48.719142, lng: -3.380141}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719142, lng: -3.380141},{lat: 48.719183, lng: -3.379915}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719183, lng: -3.379915},{lat: 48.719199, lng: -3.379681}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719199, lng: -3.379681},{lat: 48.719214, lng: -3.379362}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719214, lng: -3.379362},{lat: 48.719332, lng: -3.379352}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719332, lng: -3.379352},{lat: 48.719533, lng: -3.379445}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.719533, lng: -3.379445},{lat: 48.720058, lng: -3.379623}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.720058, lng: -3.379623},{lat: 48.720956, lng: -3.380272}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.720956, lng: -3.380272},{lat: 48.72171, lng: -3.380744}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.72171, lng: -3.380744},{lat: 48.722502, lng: -3.381062}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.722502, lng: -3.381062},{lat: 48.723091, lng: -3.381353}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.723091, lng: -3.381353},{lat: 48.723691, lng: -3.381688}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.723691, lng: -3.381688},{lat: 48.724416, lng: -3.382143}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.724416, lng: -3.382143},{lat: 48.724553, lng: -3.382191}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+var flightPlanCoordinates = [{lat: 48.724553, lng: -3.382191},{lat: 48.724716, lng: -3.382218}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+
+
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: fenway,
+        pov: {
+          heading: -6.2355768799, 
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
+    </script>
+  </body>
+</html>
