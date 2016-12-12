@@ -22,19 +22,14 @@
     <script>
 
 function initialize() {
-  var fenway = {lat: 48.730762, lng: -3.3835};
+  var fenway = {lat: 48.730148, lng: -3.384571};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: fenway,
     zoom: 19
   });
 
-var flightPlanCoordinates = [{lat: 48.730762, lng: -3.3835},{lat: 48.730207, lng: -3.384467}];
-var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
-flightPath.setMap(map);
-var flightPlanCoordinates = [{lat: 48.730207, lng: -3.384467},{lat: 48.730148, lng: -3.384571}];
-var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
-flightPath.setMap(map);
-var flightPlanCoordinates = [{lat: 48.730148, lng: -3.384571},{lat: 48.730057, lng: -3.38473}];
+
+var flightPlanCoordinates = [{lat: 48.730762, lng: -3.3835},{lat: 48.730207, lng: -3.384467},{lat: 48.730148, lng: -3.384571},{lat: 48.730057, lng: -3.38473}];
 var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
 flightPath.setMap(map);
 
@@ -43,7 +38,7 @@ flightPath.setMap(map);
       document.getElementById('pano'), {
         position: fenway,
         pov: {
-          heading: -130.946702811, 
+          heading: -130.946702811,
           pitch: 10
         }
       });
@@ -53,7 +48,7 @@ flightPath.setMap(map);
 
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&callback=initMap"type="text/javascript">
     </script>
   </body>
 </html>
