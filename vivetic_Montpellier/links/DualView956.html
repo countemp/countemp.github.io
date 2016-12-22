@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+function initialize() {
+  var fenway = {lat: 43.607893, lng: 3.892052};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 19
+  });
+
+
+var flightPlanCoordinates = [{lat: 43.607893, lng: 3.892052},{lat: 43.607852, lng: 3.892049},{lat: 43.60758, lng: 3.892014},{lat: 43.60758, lng: 3.891936},{lat: 43.60759, lng: 3.891787},{lat: 43.60756, lng: 3.891786},{lat: 43.607526, lng: 3.891777},{lat: 43.607479, lng: 3.891749},{lat: 43.607455, lng: 3.891724},{lat: 43.607427, lng: 3.891685},{lat: 43.607407, lng: 3.891647},{lat: 43.607391, lng: 3.891611},{lat: 43.607379, lng: 3.891562},{lat: 43.607371, lng: 3.891482},{lat: 43.607376, lng: 3.89143},{lat: 43.607387, lng: 3.891379},{lat: 43.607397, lng: 3.891345},{lat: 43.607422, lng: 3.891299},{lat: 43.607442, lng: 3.891272},{lat: 43.607468, lng: 3.891245},{lat: 43.607503, lng: 3.891218},{lat: 43.607559, lng: 3.891196},{lat: 43.607614, lng: 3.891196},{lat: 43.607627, lng: 3.891204},{lat: 43.607638, lng: 3.891046},{lat: 43.607665, lng: 3.890952},{lat: 43.607972, lng: 3.890995}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+
+
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: fenway,
+        pov: {
+          heading: -176.967566564,
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+    </script>
+  </body>
+</html>

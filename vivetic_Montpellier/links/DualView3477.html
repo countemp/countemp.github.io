@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+function initialize() {
+  var fenway = {lat: 43.626872, lng: 3.889427};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 19
+  });
+
+
+var flightPlanCoordinates = [{lat: 43.626872, lng: 3.889427},{lat: 43.626825, lng: 3.889241},{lat: 43.626787, lng: 3.889097},{lat: 43.626566, lng: 3.888316},{lat: 43.626454, lng: 3.887906},{lat: 43.626376, lng: 3.887601},{lat: 43.626354, lng: 3.88749},{lat: 43.626333, lng: 3.887355},{lat: 43.626322, lng: 3.88723},{lat: 43.626314, lng: 3.887048},{lat: 43.626309, lng: 3.886167},{lat: 43.626305, lng: 3.885414},{lat: 43.626298, lng: 3.884967},{lat: 43.626294, lng: 3.884715},{lat: 43.626293, lng: 3.884678},{lat: 43.626294, lng: 3.884485}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+
+
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: fenway,
+        pov: {
+          heading: -109.239909435,
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+    </script>
+  </body>
+</html>

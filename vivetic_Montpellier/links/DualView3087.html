@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+function initialize() {
+  var fenway = {lat: 43.601046, lng: 3.885296};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 19
+  });
+
+
+var flightPlanCoordinates = [{lat: 43.601046, lng: 3.885296},{lat: 43.601039, lng: 3.885484},{lat: 43.601036, lng: 3.885624},{lat: 43.601025, lng: 3.885773},{lat: 43.600963, lng: 3.885912},{lat: 43.60082, lng: 3.886205},{lat: 43.600764, lng: 3.886312},{lat: 43.600654, lng: 3.886503},{lat: 43.600572, lng: 3.886649},{lat: 43.600443, lng: 3.886869},{lat: 43.600333, lng: 3.88705},{lat: 43.600277, lng: 3.887145},{lat: 43.600103, lng: 3.887453},{lat: 43.600046, lng: 3.887611},{lat: 43.599995, lng: 3.887771},{lat: 43.599877, lng: 3.88807},{lat: 43.599841, lng: 3.88815},{lat: 43.599795, lng: 3.888251}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+
+
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: fenway,
+        pov: {
+          heading: 92.9440376179,
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+    </script>
+  </body>
+</html>

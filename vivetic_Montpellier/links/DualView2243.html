@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+function initialize() {
+  var fenway = {lat: 43.609287, lng: 3.881625};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 19
+  });
+
+
+var flightPlanCoordinates = [{lat: 43.609287, lng: 3.881625},{lat: 43.609295, lng: 3.881633},{lat: 43.609303, lng: 3.881642},{lat: 43.609309, lng: 3.881648},{lat: 43.609315, lng: 3.881655},{lat: 43.609321, lng: 3.881662},{lat: 43.609326, lng: 3.881668},{lat: 43.60933, lng: 3.881673},{lat: 43.609332, lng: 3.881676},{lat: 43.609339, lng: 3.881686},{lat: 43.609346, lng: 3.881695},{lat: 43.609353, lng: 3.881706},{lat: 43.609355, lng: 3.881709},{lat: 43.609359, lng: 3.881717},{lat: 43.609366, lng: 3.881729},{lat: 43.609371, lng: 3.881739},{lat: 43.609374, lng: 3.881743},{lat: 43.609376, lng: 3.881749},{lat: 43.60938, lng: 3.881757},{lat: 43.60939, lng: 3.881778},{lat: 43.609347, lng: 3.88182},{lat: 43.609321, lng: 3.881976},{lat: 43.609351, lng: 3.882007},{lat: 43.609374, lng: 3.881957},{lat: 43.609385, lng: 3.881976},{lat: 43.609379, lng: 3.881978},{lat: 43.609329, lng: 3.882078},{lat: 43.609326, lng: 3.882091},{lat: 43.609312, lng: 3.882233},{lat: 43.609277, lng: 3.882222},{lat: 43.609291, lng: 3.882131},{lat: 43.609183, lng: 3.882001},{lat: 43.609152, lng: 3.881963},{lat: 43.609094, lng: 3.88227},{lat: 43.609056, lng: 3.882231}];
+var flightPath = new google.maps.Polyline({path: flightPlanCoordinates, geodesic: true, strokeColor: '#0000ff', strokeOpacity: 1.0, strokeWeight: 2});
+flightPath.setMap(map);
+
+
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: fenway,
+        pov: {
+          heading: 35.9044415209,
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+    </script>
+  </body>
+</html>
