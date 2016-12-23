@@ -25,8 +25,10 @@ function initialize() {
   var fenway = {lat: 43.609069, lng: 3.883423};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: fenway,
-    zoom: 19
+    zoom: 19,
+    mapTypeId: 'hybrid'
   });
+  map.setTilt(0);
 
 
 var flightPlanCoordinates = [{lat: 43.609069, lng: 3.883423},{lat: 43.609028, lng: 3.883386},{lat: 43.608989, lng: 3.88335},{lat: 43.608983, lng: 3.883363},{lat: 43.60896, lng: 3.883374},{lat: 43.608935, lng: 3.883387},{lat: 43.608916, lng: 3.883309},{lat: 43.608928, lng: 3.883294},{lat: 43.608925, lng: 3.883291},{lat: 43.60896, lng: 3.883218},{lat: 43.608938, lng: 3.883199},{lat: 43.608976, lng: 3.88312},{lat: 43.608954, lng: 3.883101},{lat: 43.608992, lng: 3.883022},{lat: 43.608959, lng: 3.882992},{lat: 43.608993, lng: 3.882921},{lat: 43.608971, lng: 3.882901},{lat: 43.609009, lng: 3.882822},{lat: 43.608987, lng: 3.882802},{lat: 43.609023, lng: 3.882728},{lat: 43.609001, lng: 3.882709},{lat: 43.609038, lng: 3.882633},{lat: 43.609016, lng: 3.882614},{lat: 43.609053, lng: 3.882538},{lat: 43.609031, lng: 3.882518},{lat: 43.609068, lng: 3.882441},{lat: 43.609054, lng: 3.882428},{lat: 43.609092, lng: 3.882348},{lat: 43.609075, lng: 3.882332},{lat: 43.609043, lng: 3.882302},{lat: 43.609056, lng: 3.882231}];
@@ -48,7 +50,7 @@ flightPath.setMap(map);
 
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
     </script>
   </body>
 </html>

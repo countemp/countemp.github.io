@@ -25,8 +25,10 @@ function initialize() {
   var fenway = {lat: 43.622049, lng: 3.88891};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: fenway,
-    zoom: 19
+    zoom: 19,
+    mapTypeId: 'hybrid'
   });
+  map.setTilt(0);
 
 
 var flightPlanCoordinates = [{lat: 43.622049, lng: 3.88891},{lat: 43.62211, lng: 3.889217},{lat: 43.622113, lng: 3.889254},{lat: 43.62211, lng: 3.889282},{lat: 43.622044, lng: 3.889486},{lat: 43.622024, lng: 3.889504},{lat: 43.621996, lng: 3.889508},{lat: 43.621829, lng: 3.889413},{lat: 43.621806, lng: 3.889414},{lat: 43.621783, lng: 3.889444},{lat: 43.621709, lng: 3.889684},{lat: 43.621703, lng: 3.889727},{lat: 43.621714, lng: 3.889773},{lat: 43.621874, lng: 3.889944},{lat: 43.621891, lng: 3.88999},{lat: 43.621899, lng: 3.890058},{lat: 43.621887, lng: 3.890104},{lat: 43.621796, lng: 3.890276}];
@@ -48,7 +50,7 @@ flightPath.setMap(map);
 
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
     </script>
   </body>
 </html>

@@ -25,8 +25,10 @@ function initialize() {
   var fenway = {lat: 43.608012, lng: 3.883768};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: fenway,
-    zoom: 19
+    zoom: 19,
+    mapTypeId: 'hybrid'
   });
+  map.setTilt(0);
 
 
 var flightPlanCoordinates = [{lat: 43.608012, lng: 3.883768},{lat: 43.608006, lng: 3.883727},{lat: 43.607995, lng: 3.883695},{lat: 43.607968, lng: 3.883652},{lat: 43.607946, lng: 3.883626},{lat: 43.607936, lng: 3.883615},{lat: 43.607909, lng: 3.883598},{lat: 43.607852, lng: 3.883572},{lat: 43.607784, lng: 3.883557},{lat: 43.60767, lng: 3.88352},{lat: 43.607568, lng: 3.883492},{lat: 43.607452, lng: 3.883452},{lat: 43.607295, lng: 3.883397},{lat: 43.607222, lng: 3.883368},{lat: 43.607151, lng: 3.883339},{lat: 43.606969, lng: 3.883258},{lat: 43.606866, lng: 3.883198},{lat: 43.606763, lng: 3.883136},{lat: 43.606693, lng: 3.883093},{lat: 43.606508, lng: 3.883004},{lat: 43.606507, lng: 3.883006},{lat: 43.606505, lng: 3.883011},{lat: 43.606479, lng: 3.882992},{lat: 43.606442, lng: 3.882965},{lat: 43.606448, lng: 3.882945},{lat: 43.606282, lng: 3.882816},{lat: 43.605986, lng: 3.8826},{lat: 43.605762, lng: 3.882437},{lat: 43.605632, lng: 3.882339},{lat: 43.605669, lng: 3.882251},{lat: 43.605723, lng: 3.882199},{lat: 43.605765, lng: 3.88216},{lat: 43.605773, lng: 3.882152},{lat: 43.605812, lng: 3.882197},{lat: 43.605824, lng: 3.882177},{lat: 43.605933, lng: 3.882293},{lat: 43.605921, lng: 3.882315},{lat: 43.606064, lng: 3.882461},{lat: 43.606102, lng: 3.882496},{lat: 43.606108, lng: 3.882502},{lat: 43.60612, lng: 3.882513},{lat: 43.606194, lng: 3.882582},{lat: 43.606368, lng: 3.882724},{lat: 43.606539, lng: 3.882847},{lat: 43.606623, lng: 3.882905},{lat: 43.606693, lng: 3.882949},{lat: 43.60674, lng: 3.88298},{lat: 43.606855, lng: 3.883041},{lat: 43.607056, lng: 3.883142},{lat: 43.60712, lng: 3.88317},{lat: 43.607145, lng: 3.883182},{lat: 43.607209, lng: 3.88321},{lat: 43.607316, lng: 3.883259},{lat: 43.607476, lng: 3.883311},{lat: 43.607608, lng: 3.883354},{lat: 43.607717, lng: 3.883377},{lat: 43.607724, lng: 3.883378},{lat: 43.60786, lng: 3.883404},{lat: 43.607872, lng: 3.883407},{lat: 43.607875, lng: 3.883378},{lat: 43.607892, lng: 3.883381},{lat: 43.607889, lng: 3.88341},{lat: 43.607916, lng: 3.883416},{lat: 43.608001, lng: 3.883434},{lat: 43.608032, lng: 3.883441},{lat: 43.608153, lng: 3.883468},{lat: 43.608155, lng: 3.883454}];
@@ -48,7 +50,7 @@ flightPath.setMap(map);
 
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
     </script>
   </body>
 </html>

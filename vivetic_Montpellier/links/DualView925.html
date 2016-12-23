@@ -25,8 +25,10 @@ function initialize() {
   var fenway = {lat: 43.606383, lng: 3.890751};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: fenway,
-    zoom: 19
+    zoom: 19,
+    mapTypeId: 'hybrid'
   });
+  map.setTilt(0);
 
 
 var flightPlanCoordinates = [{lat: 43.606383, lng: 3.890751},{lat: 43.606418, lng: 3.890726},{lat: 43.606421, lng: 3.890677},{lat: 43.60646, lng: 3.890699},{lat: 43.606504, lng: 3.890677},{lat: 43.606514, lng: 3.890707},{lat: 43.606648, lng: 3.890637},{lat: 43.606657, lng: 3.89066},{lat: 43.606669, lng: 3.89063},{lat: 43.606685, lng: 3.890625},{lat: 43.6067, lng: 3.890634},{lat: 43.606697, lng: 3.890615},{lat: 43.606695, lng: 3.890597},{lat: 43.606696, lng: 3.890546},{lat: 43.606699, lng: 3.890526},{lat: 43.606704, lng: 3.890508},{lat: 43.606688, lng: 3.890514},{lat: 43.606672, lng: 3.890502},{lat: 43.606667, lng: 3.890476},{lat: 43.606659, lng: 3.890493},{lat: 43.606536, lng: 3.890404},{lat: 43.606527, lng: 3.890429},{lat: 43.606482, lng: 3.890397},{lat: 43.606442, lng: 3.890413},{lat: 43.606445, lng: 3.89036},{lat: 43.606409, lng: 3.890335}];
@@ -48,7 +50,7 @@ flightPath.setMap(map);
 
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSZSurUWgchyo0TcMal6MWkMUjcr46AGM&signed_in=true&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initialize">
     </script>
   </body>
 </html>
